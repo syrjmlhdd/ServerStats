@@ -36,7 +36,7 @@ tanggal1.setName(
 
 }
 
-setInterval(botStatus, 10000);
+setInterval(clientStatus, 10000);
 
 const guild = client.guilds.get('720980688538435634');
 
