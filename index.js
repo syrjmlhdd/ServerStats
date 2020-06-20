@@ -1,16 +1,16 @@
-﻿const Discord = require('discord.js');
-const bot = new Discord.Client({disableEveryone: true});
+const Discord = require('discord.js');
+const client = new Discord.Client();
 const timers = require('timers');
 const moment = require("moment");
 const timezone = require("moment-timezone");
 const { TOKEN } = require("./config.json");
 const express = require('express');
 
-bot.on('ready', () => {
-console.log(`${bot.user.tag} ON !`)
+client.on('ready', () => {
+console.log(`${client.user.tag} ON !`)
 })
   
-  bot.on('ready', message => {
+ client.on('ready', message => {
   const list = [
     {
       "nama": "SERVERSTATS+.",
@@ -22,11 +22,11 @@ console.log(`${bot.user.tag} ON !`)
   ];
   setInterval(() => {
   const tex = list[Math.floor(Math.random() * list.length)];
-    bot.user.setActivity(tex.nama, {type: tex.type});
+    client.user.setActivity(tex.nama, {type: tex.type});
   },10000);
   
-  function botStatus() {
-let tanggal1 = bot.channels.find("id", "721346141446340648");
+  function clientStatus() {
+let tanggal1 = client.channels.find("id", "721346141446340648");
 tanggal1.setName(
      `${timezone()
       .tz("Asia/Jakarta")
@@ -38,17 +38,17 @@ tanggal1.setName(
 
 setInterval(botStatus, 10000);
 
-const guild = bot.guilds.get('720980688538435634');
+const guild = client.guilds.get('720980688538435634');
 
 
-const totalm = bot.channels.get('721345995539087430');
-const user = bot.channels.get('721346011833958430'); 
-const bots = bot.channels.get('721346030695612515');  
-const voice = bot.channels.get('721346054619922495');
-const text = bot.channels.get('721346070906404974');
-const role = bot.channels.get('721346086031327234');  
-const onlineUsers = bot.channels.get('721346103542415441');
-const offlineUsers = bot.channels.get('721346120541929473');
+const totalm = client.channels.get('721345995539087430');
+const user = client.channels.get('721346011833958430'); 
+const bots = client.channels.get('721346030695612515');  
+const voice = client.channels.get('721346054619922495');
+const text = client.channels.get('721346070906404974');
+const role = client.channels.get('721346086031327234');  
+const onlineUsers = client.channels.get('721346103542415441');
+const offlineUsers = client.channels.get('721346120541929473');
   
 setInterval(function() {
   console.log('UPDATE STATUS...')
@@ -111,4 +111,4 @@ setInterval(function() {
     
 });
 
-bot.login(TOKEN)
+client.login(TOKEN);
