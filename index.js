@@ -41,7 +41,7 @@ setInterval(clientStatus, 10000);
 const guild = client.guilds.get('713795666828066878');
 
 
-const totalm = client.channels.get('721345995539087430');
+const totalm = client.channels.get('723919016573403157');
 const user = client.channels.get('723918983912357888'); 
 const bots = client.channels.get('723919000777523251');  
 const voice = client.channels.get('723919033795215440');
