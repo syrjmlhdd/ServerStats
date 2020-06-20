@@ -1,0 +1,27 @@
+{
+  "name": "serverstatsplus",
+  "version": "1.0.0",
+  "description": "testimoni 24/7 online",
+  "main": "index.js",
+  "author": "Ajo#4585",
+  "repository": "https://github.com/joch00/serverstatsplus",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.6.4",
+    "express": "^4.17.1",
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31",
+    "timers": "^0.1.1"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
