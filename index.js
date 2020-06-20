@@ -26,29 +26,29 @@ console.log(`${client.user.tag} ON !`)
   },10000);
   
   function clientStatus() {
-let tanggal1 = client.channels.find("id", "721346141446340648");
+let tanggal1 = client.channels.find("id", "723918966665248818");
 tanggal1.setName(
      `${timezone()
       .tz("Asia/Jakarta")
       .locale("id")
-      .format("📅 dddd,LL") + " "}`
+      .format("🔱┇dddd,LL") + " "}`
  );
 
 }
 
 setInterval(clientStatus, 10000);
 
-const guild = client.guilds.get('720980688538435634');
+const guild = client.guilds.get('713795666828066878');
 
 
 const totalm = client.channels.get('721345995539087430');
-const user = client.channels.get('721346011833958430'); 
-const bots = client.channels.get('721346030695612515');  
-const voice = client.channels.get('721346054619922495');
-const text = client.channels.get('721346070906404974');
-const role = client.channels.get('721346086031327234');  
-const onlineUsers = client.channels.get('721346103542415441');
-const offlineUsers = client.channels.get('721346120541929473');
+const user = client.channels.get('723918983912357888'); 
+const bots = client.channels.get('723919000777523251');  
+const voice = client.channels.get('723919033795215440');
+const text = client.channels.get('723919050576756834');
+const role = client.channels.get('723919067156840499');  
+const onlineUsers = client.channels.get('723919087255814164');
+const offlineUsers = client.channels.get('723919102250450974');
   
 setInterval(function() {
   console.log('UPDATE STATUS...')
@@ -74,40 +74,40 @@ setInterval(function() {
 
   
   
-  totalm.setName("All Members : " + totalmCount)
+  totalm.setName("🔱┇All Members : " + totalmCount)
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
   
-  user.setName("Members : " + userCount)
+  user.setName("🔱┇Users : " + userCount)
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
   
-  bots.setName("Bots : " + botCount)
+  bots.setName("🔱┇Bots : " + botCount)
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
   
-  voice.setName("Voice Channels : " + voiceCount)
+  voice.setName("🔱┇Voice Channels : " + voiceCount)
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
 
-  text.setName("Text Channels : " + textCount)
+  text.setName("🔱┇Text Channels : " + textCount)
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
 
-  role.setName("Roles : " + roleCount)
+  role.setName("🔱┇Roles : " + roleCount)
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
 
   
-  onlineUsers.setName("online : " + onlineCount)
+  onlineUsers.setName("🔱┇online : " + onlineCount)
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
 
-  offlineUsers.setName("offline : " + offlineCount)
+  offlineUsers.setName("🔱┇offline : " + offlineCount)
   .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
   .catch(console.error);
   
-  }, 10000)
+  }, 5000)
     
 });
 
